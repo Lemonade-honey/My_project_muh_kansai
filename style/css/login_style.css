@@ -1,0 +1,60 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background: rgb(134, 134, 134);
+}
+.login-container form{
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: .5rem;
+    /* padding: 1rem 5rem; */
+    max-width: 30rem;
+    width: 100%;
+    padding: 0 1rem;
+    background: #fff;
+}.login-container form > h1{
+    text-transform: capitalize;
+    text-align: center;
+    margin: 1.2rem;
+}.login-container form .status-error{
+    text-align: center;
+    text-transform: capitalize;
+    color: red;
+    font-size: 1.2rem;
+}
+.login-container form .form-data{
+    width: 100%;
+    margin-bottom: 1.2rem;
+}.login-container form .form-data p{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+.login-container form .form-data .box{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--main-border-color);
+    width: 100%;
+    font-size: 1.1rem;
+}.login-container form .form-data .box:focus{
+    border-color: orange;
+}
+.login-container form .submit-data{
+    text-align: center;
+}.login-container form .submit-data p{
+    text-align: left;
+}
+.login-container form .submit-data button{
+    padding: .5rem 1.5rem;
+    border: 1px solid #000;
+    border-radius: .5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background: var(--main-navbar_index-color);
+    color: #fff;
+}.login-container form .submit-data button:hover{
+    background: rgb(39, 124, 92);
+    border-color: orange;
+}

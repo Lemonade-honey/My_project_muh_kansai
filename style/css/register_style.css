@@ -1,0 +1,86 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.register-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background: rgb(134, 134, 134);
+}
+
+.register-container form{
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: .5rem;
+    /* padding: 1rem 5rem; */
+    max-width: 50rem;
+    width: 100%;
+    padding: 0 1rem;
+    background: #fff;
+}.register-container form > h1{
+    text-transform: capitalize;
+    text-align: center;
+    margin: 1.2rem;
+}.register-container form .form-data{
+    width: 100%;
+    margin-bottom: 1.2rem;
+}.register-container form .form-data p{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}.register-container form .form-data p .opsional::before{
+    content: '(optional)';
+    color: rgb(75, 137, 156);
+}.register-container form .form-data .alert{
+    text-decoration: underline;
+    color: red;
+}
+
+.register-container form .form-data .box{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--main-border-color);
+    width: 100%;
+    font-size: 1.1rem;
+}.register-container form .form-data .box:focus{
+    border-color: orange;
+}.register-container form .form-data .box.hide{
+    display: none;
+}
+
+.register-container form .form-data .handphone{
+    display: flex;
+}.register-container form .form-data .handphone .box.code{
+    width: 5.5rem;
+}
+
+.register-container form .form-data .capcha{
+    display: flex;
+}
+
+.register-container form .submit-data{
+    text-align: center;
+}.register-container form .submit-data p{
+    text-align: left;
+    font-size: 1.2rem;
+}
+.register-container form .submit-data button{
+    padding: .5rem 1.5rem;
+    border: 1px solid #000;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background: var(--main-navbar_index-color);
+    color: #fff;
+}.register-container form .submit-data button:hover{
+    background: rgb(39, 124, 92);
+    border-color: orange;
+}

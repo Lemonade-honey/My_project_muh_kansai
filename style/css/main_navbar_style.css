@@ -1,0 +1,276 @@
+:root{
+    --navbar-main-color: rgb(6, 70, 53);
+    --navbar-secend-color: #A2B38B;
+    --navbar-hover-menu: #FAFDD6;
+}
+
+/*============= navbar start ============== */
+.wrapper{
+    background: var(--navbar-main-color);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    text-transform: capitalize;
+}
+.wrapper nav{
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+nav .content-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .content-navbar .links-navbar{
+    margin-left: 80px;
+    display: flex;
+}
+.wrapper .content-navbar .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+.content-navbar .links-navbar li{
+    list-style: none;
+    line-height: 70px;
+}
+.content-navbar .links-navbar li a,
+.content-navbar .links-navbar li label{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.content-navbar .links-navbar li label{
+    display: none;
+}
+.content-navbar .links-navbar li a:hover,
+.content-navbar .links-navbar li label:hover{
+    background: var(--navbar-hover-menu);
+    color: black;
+}
+.wrapper .icon,
+.wrapper .menu-icon{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+    padding-right: 1rem;
+}
+.wrapper .icon:hover{
+    color: #A2B38B;
+}
+.wrapper .menu-icon{
+    display: none;
+}
+.wrapper input[type="checkbox"]{
+    display: none;
+}
+/* Dropdown Menu code start */
+.content-navbar .links-navbar ul{
+    position: absolute;
+    background: #A2B38B;
+    top: 80px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+.content-navbar .links-navbar li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+.content-navbar .links-navbar ul li a{
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 0px!important;
+}
+.content-navbar .links-navbar ul ul{
+    position: absolute;
+    top: 0;
+    right: calc(-100% + 8px);
+}
+.content-navbar .links-navbar ul li{
+    position: relative;
+}
+.content-navbar .links-navbar ul li:hover ul{
+    top: 0;
+}
+
+nav .language .globe{
+    width: 3rem;
+    padding: .5rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}nav .language .globe:hover{
+    border: 2px solid #fff;
+}
+nav .language .globe img{
+    width: 100%;
+}
+
+/* login start */
+
+.form-pop-up{
+    position: fixed;
+    top: -120%;left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.form-pop-up.active{
+    top: 0;
+}
+.form-pop-up #form-close:hover{
+    color: red;
+}
+.form-pop-up .form-container{
+    position: relative;
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    background: white;
+    width: 30rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.form-pop-up .form-container .flag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+}.form-pop-up .form-container .flag a{
+    border-bottom: 4px solid transparent;
+}.form-pop-up .form-container .flag a:hover{
+    border-color: orange;
+}
+
+.form-pop-up .form-container .cancel{
+    top: .5rem;
+    right: 1rem;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: .1rem .5rem;
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/* login end */
+
+@media screen and (max-width: 1250px){
+    .wrapper nav{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    nav .content-navbar .links-navbar{
+        margin-left: 30px;
+    }
+    .content-navbar .links-navbar li a{
+        padding: 8px 13px;
+    }
+  }
+  
+@media screen and (max-width: 900px){
+    .wrapper .menu-icon{
+        display: block;
+    }
+    .wrapper #show-menu:checked ~ .menu-icon i::before{
+        content: "\f00d";
+    }
+    nav .content-navbar .links-navbar{
+        display: block;
+        position: fixed;
+        background: var(--navbar-secend-color);
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 350px;
+        overflow-y: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+    }nav .content-navbar .links-navbar::-webkit-scrollbar{
+        display: none;
+    }
+    nav #show-menu:checked ~ .content-navbar .links-navbar{
+        left: 0%;
+    }
+    .content-navbar .links-navbar li{
+        margin: 15px 20px;
+    }
+    .content-navbar .links-navbar li a,
+    .content-navbar .links-navbar li label{
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+    }
+    .content-navbar .links-navbar li a.desktop-link{
+        display: none;
+    }
+  
+    /* dropdown responsive code start */
+    .content-navbar .links-navbar ul,
+    .content-navbar .links-navbar ul ul{
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: none;
+        max-height: 0px;
+        overflow: hidden;
+    }
+    .content-navbar .links-navbar #show-features:checked ~ ul,
+    .content-navbar .links-navbar #show-services:checked ~ ul,
+    .content-navbar .links-navbar #show-items:checked ~ ul{
+      max-height: 100vh;
+    }
+    .content-navbar .links-navbar ul li{
+        margin: 7px 20px;
+    }
+    .content-navbar .links-navbar ul li a{
+        font-size: 18px;
+        line-height: 30px;
+        border-radius: 5px!important;
+    }
+}
+@media(max-width: 768px){
+
+}
+@media screen and (max-width: 400px){
+    .wrapper nav{
+        padding: 0 10px;
+    }
+    .content-navbar .logo a{
+        font-size: 27px;
+    }
+    .wrapper .go-icon{
+        width: 30px;
+        right: 0;
+    }
+    .wrapper input{
+        padding-right: 30px;
+    }
+    
+}

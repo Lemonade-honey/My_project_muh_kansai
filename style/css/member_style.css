@@ -1,0 +1,103 @@
+form .pencarian{
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+form .pencarian input{
+    width: 100%;
+}form .pencarian .box{
+    text-transform: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--main-border-color);
+}
+form .pencarian .box.btn{
+    padding: .5rem 2rem;
+    cursor: pointer;
+}form .pencarian .box.btn:hover{
+    background-color: rgb(214, 214, 214);
+}
+.container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .list-anggota{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 43rem);
+    gap: 2rem;
+    max-width: 100vw;
+    /* background-color: red; */
+}
+.card-anggota{
+    padding: 1rem;
+    border: 1px solid var(--main-border-color);
+    border-radius: .5rem;
+    overflow: hidden;
+    max-width: 50rem;
+}.card-anggota:hover, .card-anggota:focus{
+    border: 1px solid orange;
+}
+.card-anggota .atas{
+    display: flex;
+}
+.card-anggota .atas .gambar{
+    margin-right: 1rem;
+    width: 8.5rem;
+    height: 9.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    background-color: var(--main-border-color);
+}.card-anggota .atas .gambar > img{
+    width: 8rem;
+    height: 9rem;
+    border-radius: .5rem;
+    object-fit: cover;
+    object-position: center;
+    background-color: #fff;
+}.card-anggota .atas .data-anggota{
+    display: block;
+    margin-top: 1rem;
+}.card-anggota .atas .data-anggota .data{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.card-anggota .atas .data-anggota .data > img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+.card-anggota .bawah{
+    display: block;
+}.card-anggota .bawah .btn{
+    float: right;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    color: #fff;
+    border: 1px solid var(--navbar-main-color);
+    background-color: var(--navbar-main-color);
+}.card-anggota .bawah .btn:hover{
+    border: 1px solid var(--navbar-main-color);
+    background-color: var(--navbar-secend-color);
+}
+
+@media(max-width: 960px){
+    .container .list-anggota{
+        grid-auto-flow: row;
+        grid-template-columns: none;
+        gap: 1rem;
+    }
+}
+@media(max-width: 480px){
+    .container .list-anggota{
+        width: 100%;
+    }
+    .card-anggota .atas .gambar{
+        display: none;
+    }
+}
+
+

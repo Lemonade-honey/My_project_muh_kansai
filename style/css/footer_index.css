@@ -1,0 +1,79 @@
+/*============= footer start ============== */
+footer{
+    padding: 2rem 0rem;
+    background-color: rgb(6, 70, 53);
+}
+footer table {
+    border-collapse:separate; 
+    /* border-spacing: 1rem; */
+}
+footer p{
+	/* margin: 2rem 2rem; */
+	margin-top: 1rem;
+	color: white;
+	text-align: justify;
+	/* font-size: 1.5rem; */
+}
+footer .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	padding: 2rem 4%;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #A2B38B;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col tr td{
+	color: #ffffff;
+	font-weight: 300;
+	text-transform: none;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: orange;
+	padding-left: 8px;
+}
+.footer-col .alamat{
+    font-size: 1.6rem;
+}
+@media(max-width:828px){
+    .footer-col{
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+    .footer-col h4{
+        text-align: center;
+    }
+    .footer-col h4::before{
+        width: 100%;
+    }
+	
+}
+/*============= footer end ============== */

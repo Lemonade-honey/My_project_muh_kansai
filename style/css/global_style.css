@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,300&display=swap');
+
+/* input web-kit */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* -webkit-appearance: none; */
+    margin: 0;
+}
+
+*{
+    font-family: 'Nunito';
+    margin: 0;padding: 0;top: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+:root{
+    --main-backgroun-color: rgb(49, 207, 110);
+    --main-navbar_index-color: rgb(6, 70, 53); /* main color ada di main_navbar */
+    --main-border-color: rgb(194, 194, 194);
+}
+
+/* ==== paggingnation ========= */
+.paggingnation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}.paggingnation a{
+    padding: .2rem .6rem;
+    background-color: var(--main-border-color);
+    border-radius: .5rem;
+    color: blue;
+}
+
+
+/*========= start index style ==========*/
+section{
+    padding: 2rem 4%;
+    font-size: 1.2rem;
+    min-height: 10rem;
+}
+
+.alert{
+    color: red;
+    text-transform: capitalize;
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 80%;
+    }
+}
+/*=========== end index styl e===========*/
+
+.judul-container{
+    display: block;   
+}.judul-container h1{
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}

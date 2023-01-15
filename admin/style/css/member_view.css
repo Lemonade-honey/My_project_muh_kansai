@@ -1,0 +1,67 @@
+.container-member{
+    display: flex;
+    justify-content: center;
+}
+.container-member .member-data{
+    gap: 2rem;
+    display: flex;
+    /* justify-content: center; */
+    border: 1px solid black;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 100%;
+}
+.container-member .gambar{
+    max-width: 20rem;
+}.container-member .gambar img{
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.container-member .user-data{
+    width: 100%;
+}
+.container-member .user-data .data{
+    margin-bottom: 1rem;
+}
+.container-member .user-data .data p{
+    text-transform: capitalize;
+}.container-member .user-data .data .box{
+    padding: 0.5rem .8rem;
+    border: 1px solid var(--main-border-color);
+    width: 100%;
+}.container-member .user-data .data .box.capital{
+    text-transform: uppercase;
+}.container-member .user-data .data textarea{
+    resize: none;
+}
+
+.container-member .user-data .btn{
+    float: right;
+    padding: .5rem 1.5rem;
+    background: var(--main-navbar_index-color);
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1rem;
+}.container-member .user-data .btn:hover{
+    opacity: 0.8;
+}.container-member .user-data .btn.red{
+    background: rgb(238, 36, 36);
+}.container-member .user-data .btn.blue{
+    background: rgb(13, 74, 206);
+}
+
+
+@media(max-width: 890px){
+    .container-member .member-data{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

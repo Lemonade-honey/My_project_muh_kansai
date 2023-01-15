@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/css/global_style.css">
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 50vh;
+        }
+        .gambar{
+            max-width: 40rem;
+        }
+        .gambar img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            animation-name: up_and_down_loop;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            position: relative;
+        }@keyframes up_and_down_loop{
+            0%, 100%{
+                transform: translateX(0px);
+            }
+            50%{
+                transform: translateX(-20px);
+            }
+        }
+
+        .content h1{
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        .content .links{
+            margin-top: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }.content .links .btn{
+            text-align: center;
+            padding: .5rem 0;
+            border-radius: .5rem;
+            font-weight: 600;
+            background-color: rgb(10, 80, 59);
+            color: #fff;
+            max-width: 9rem;
+            width: 100%;
+        }.content .links .btn:hover{
+            background-color: rgb(50, 117, 179);
+            color: #000;
+        }
+    </style>
+    <title>Account Created</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="gambar">
+                <img src="../images/random/email.png" loading="lazy" alt="">
+            </div>
+            <div class="content">
+                <h1>account succses created, please vervied you email</h1>
+                <div class="links">
+                    <a href="https://mail.google.com/mail" class="btn">Open Gmail</a>
+                    <p>or</p>
+                    <a href="login.php" class="btn">Login Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

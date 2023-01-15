@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,300&display=swap');
+*{
+    font-family: 'Nunito';
+    /* margin: 0;padding: 0; */
+}
+:root{
+    --main-backgroun-color: rgb(49, 207, 110);
+    --main-navbar_index-color: rgb(6, 70, 53); /* main color ada di main_navbar */
+    --main-border-color: rgb(194, 194, 194);
+}
+
+section{
+    padding: 2rem 4%;
+    font-size: 1.2rem;
+    min-height: 10rem;
+}
+
+.alert{
+    color: red;
+    text-transform: capitalize;
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 80%;
+    }
+}
+
+.judul-container{
+    display: block;   
+}.judul-container h1{
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+header *, body{
+    margin: 0;padding: 0;top: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+#summernote{
+    margin: auto;padding: auto;
+}

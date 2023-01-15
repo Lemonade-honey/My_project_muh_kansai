@@ -1,0 +1,77 @@
+.search{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.search .box{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--main-border-color);
+    width: 100%;
+    font-size: 1.1rem;
+}.search .box:focus{
+    border-color: orange;
+}
+.search .cari{
+    width: 5rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.search .cari:hover{
+    background: rgb(161, 161, 161);
+    color: #fff;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+table{
+    width: 100%;
+    text-transform: capitalize;
+}
+table, th, td{
+    border: 1px solid rgb(189, 189, 189);
+    border-collapse: collapse;
+    padding: 0 .5rem;
+}
+th{
+    background-color: var(--main-navbar);
+    color: #fff;
+}
+tr:nth-child(even){
+    background-color: #dadada;
+}
+tr:hover, tr:nth-child(even):hover{
+    background-color: rgb(163, 163, 163);
+}
+tr .email{
+    text-transform: none;
+    overflow-wrap: break-word;
+    width: 5rem;
+}
+td:first-child, td:nth-child(2), td:nth-child(5), td:nth-child(6), td:nth-child(7){
+    text-align: center;
+}
+td:last-child{
+    width: 8rem;
+    text-align: center;
+}
+td .fas, .fa-solid{
+    padding: .5rem .8rem;
+    border-radius: .5rem;
+}
+td .fas:hover, td .fa-solid:hover{
+    background-color: rgb(197, 193, 193);
+}
+
+td .fa-trash{
+    color: red;
+}
+
+
+@media(max-width: 840px){
+    .container{
+        overflow-x: scroll;
+    }
+}

@@ -1,0 +1,24 @@
+.image-container{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}.sub-container{
+    margin-top: 2rem;
+    max-width: 35rem;
+}.sub-container img{
+    width: 100%;
+}.sub-container a{
+    display: block;
+}
+
+.btn{
+    float: right;
+    padding: .5rem 1rem;
+    background: rgb(57, 177, 207);
+    border: 1px solid rgb(143, 143, 143);
+    border-radius: .5rem;
+    color: #fff;
+    cursor: pointer;
+}.btn:hover{
+    opacity: .8;
+}
